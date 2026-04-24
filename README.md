@@ -1,27 +1,43 @@
-Real-Time Cybersecurity Threat Detection System (Lambda Architecture)
-This project implements a complete threat detection system for network logs using the Lambda Architecture (batch + speed + serving layers). Built as part of the Big Data mini-project (SITCN2), it analyzes historical and real-time network traffic to detect malicious patterns, port scans, SQLi/XSS attempts, brute-force attacks, and anomalous data transfers.
+# Real-Time Cybersecurity Threat Detection System
 
-Tech Stack:
-HDFS • Spark (Batch + Streaming) • Kafka • HBase • Cassandra • Grafana / HTML/JS Dashboard
+> Lambda Architecture implementation for real-time cyber threat detection from network logs
 
-Key Features:
+[![Spark](https://img.shields.io/badge/Spark-3.x-orange)](https://spark.apache.org/)
+[![Kafka](https://img.shields.io/badge/Kafka-3.x-black)](https://kafka.apache.org/)
+[![Hadoop](https://img.shields.io/badge/Hadoop-HDFS-yellow)](https://hadoop.apache.org/)
+[![HBase](https://img.shields.io/badge/HBase-2.x-red)](https://hbase.apache.org/)
+[![Cassandra](https://img.shields.io/badge/Cassandra-4.x-blue)](https://cassandra.apache.org/)
+[![Status](https://img.shields.io/badge/status-Active-success)]()
 
-Batch layer: Historical analysis of threat patterns, IP reputation scoring, attack timeline
+---
 
-Speed layer: Real-time threat detection (brute-force, attack signatures, anomalous volume) with <5s latency
+##  Table of Contents
 
-Serving layer: REST API merging batch & speed results for unified threat intelligence
+- [Project Overview](#project-overview)
+- [Architecture](#architecture)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Dataset](#dataset)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Detection Rules](#detection-rules)
+- [API Endpoints](#api-endpoints)
+- [Dashboard](#dashboard)
+- [Team](#team)
+- [License](#license)
 
-Detection Capabilities:
+---
 
-Top malicious IPs & port scans (20+ ports in <5 min)
+## Project Overview
 
-SQLi/XSS pattern extraction from request paths
+This project implements a **complete cybersecurity threat detection system** using the **Lambda Architecture**. It analyzes network logs to detect:
 
-Brute-force detection (5+ failed attempts/min)
+- Historical attack patterns (batch layer)
+- Real-time threats (speed layer)
+- Unified threat intelligence (serving layer)
 
-Real-time threat scoring per IP
+The system processes both historical data and live network traffic to provide comprehensive security monitoring with **<5 second latency** for real-time alerts.
 
-Anomalous data transfer monitoring (>10MB/10s)
+---
 
-Live Demos: Dashboard for active threats + historical visualization
+## 🏗️ Architecture
